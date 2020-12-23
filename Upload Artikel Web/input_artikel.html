@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="input_artikel.css">
+    <link rel="stylesheet" type="text/css" href="ckeditor/skins/moono-lisa/editor.css">
     <!--Font Family-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">   
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-    <!--CKEditor-->
-    <script src="/ckeditor/ckeditor.js"></script>
-
+    <!--Summernote-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <title>Input Artikel</title>
 </head>
 <body>
@@ -32,24 +31,16 @@
     <div class="konten-upload-artikel">
         <h1>Buat Artikel</h1>
         <form enctype="multipart/form-data">
-                <label>Judul</label><br>
-                <input id="kontainer-judul" type="text" name="" value="" placeholder="Judul Artikel">
-                <span>
-                <label>Upload Background</label><br>
-                <input type="file" name="foto" value="">
-                </span>
-                <label id="Isi-artikel">Isi Artikel</label><br>   
-                <textarea name="editor1"></textarea>
-                <script>
-                        CKEDITOR.replace( 'editor1' );
-                </script>
-   
+            <label>Judul</label><br>
+            <input id="kontainer-judul" type="text" name="" value="" placeholder="Judul Artikel">
+            <span>
+            <label>Upload Background</label><br>
+            <input type="file" name="foto" value="">
+            </span>
+            <label id="Isi-artikel">Isi Artikel</label><br>   
+            <textarea id="summernote" cols="30" rows="10"></textarea>
         </form>
     </div>
-
-
-
-
 
     <div class="side-nav-right">
         <div class="side-nav-up">
@@ -94,5 +85,25 @@
         </div>
         <div class="side-nav-down"></div>
     </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+  <script>
+      $('#summernote').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+  </script>
 </body>
 </html>

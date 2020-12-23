@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="input_artikel.css">
+    <!--Font Family-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <!--CKEditor-->
+    <script src="/ckeditor/ckeditor.js"></script>
+
+    <title>Input Artikel</title>
+</head>
+<body>
+    <div class="side-nav">
+        <div class="header-side-nav">
+                <h1>Dashboard</h1>
+                <p>Role : Admin</p>
+        </div>
+        <ul>
+            <li><a href="#">Profil Saya</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Informasi</a></li>
+            <li><a href="#">Analitik</a></li>
+        </ul>
+    </div>
+    <div class="konten-upload-artikel">
+        <h1>Buat Artikel</h1>
+        <form enctype="multipart/form-data">
+                <label>Judul</label><br>
+                <input id="kontainer-judul" type="text" name="" value="" placeholder="Judul Artikel">
+                <span>
+                <label>Upload Background</label><br>
+                <input type="file" name="foto" value="">
+                </span>
+                <label id="Isi-artikel">Isi Artikel</label><br>   
+                <textarea name="editor1"></textarea>
+                <script>
+                        CKEDITOR.replace( 'editor1' );
+                </script>
+   
+        </form>
+    </div>
+
+
+
+
+
+    <div class="side-nav-right">
+        <div class="side-nav-up">
+            <select name="">
+                <option value="">Publish</option>
+                <option value="">Draft</option>
+            </select>
+            <span>
+                <button type="button" id="save-draft-button">
+                    SAVE DRAFT
+                </button>
+                <button type="button" id="preview-button">
+                    PREVIEW
+                </button>
+            </span>
+            <ul>
+                <li>
+                    <img src="assets/dashicons_post-status.png">
+                    <p>Status : Draft</p>
+                    <button type="button">
+                        Edit
+                    </button>
+                </li>
+                <li>
+                    <img src="assets/dashicons_visibility.png">
+                    <p>Visibility : Public</p>
+                    <button type="button">
+                        Edit
+                    </button>
+                </li>
+                <li>
+                    <li>
+                        <img src="assets/ic_baseline-date-range.png">
+                        <p>Publish : Immediately</p>
+                        <button type="button">
+                            Edit
+                        </button>
+                    </li>
+                </li>
+            </ul>
+
+        </div>
+        <div class="side-nav-down"></div>
+    </div>
+</body>
+</html>

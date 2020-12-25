@@ -55,6 +55,43 @@ body{
     line-height: 20px;
     text-align: center;
 }
+
+/* Pop Up Menu tyle */
+
+#pop_up_menu{
+    display: none;
+    padding: 1px;
+    position: relative;
+    top: -350px;
+    left: 220px;
+    height: 140px;
+    width: 115px;
+    background-image: url('assets/Rectangle\ 149.png');
+}
+#pop_up_menu li {
+    list-style: none;
+    padding: 2px;
+}
+#pop_up_menu a {
+    text-decoration: none;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+}
+#pop_up_menu a:hover {
+    text-decoration: underline;
+}
+
+/* End */
+
+
+
+
+
 .Judul-Halaman h1 {
     position: relative;
     top: 50px;
@@ -101,6 +138,7 @@ body{
 }
 .head-kontainer-artikel{
     display: inline;
+    
 }
 .head-kontainer-artikel select {
     position: relative;
@@ -157,6 +195,46 @@ body{
     border: 1px solid #94BCF1;
     box-sizing: border-box;
     border-radius: 10px;
+}
+#edit-artikel-button {
+    position: relative;
+    left: 800px;
+    top: -93px;
+    width: 72px;
+    height: 30px;
+    background-color: #002E6D;
+    border-radius: 50px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    border: none;
+}
+#edit-artikel-button:hover {
+    cursor: pointer;
+}
+#more-artikel-button {
+    position: relative;
+    left: 810px;
+    top: -93px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 30px;
+    border-radius: 50%;
+    background: rgba(0, 46, 109, 0.15);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+#more-artikel-button:hover {
+    cursor: pointer;
+}
+.object {
+    border-bottom: 2px solid #c4c4c4;
+    border-top: 2px solid #c4c4c4;
 }
 
 .object h1 {  

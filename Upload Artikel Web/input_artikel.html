@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="input_artikel.css">
-    <link rel="stylesheet" type="text/css" href="ckeditor/skins/moono-lisa/editor.css">
     <!--Font Family-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">   
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-    <!--Summernote-->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="/ckeditor/ckeditor.js"></script>
+
     <title>Input Artikel</title>
 </head>
 <body>
@@ -23,24 +21,27 @@
         </div>
         <ul>
             <li><a href="#">Profil Saya</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="#" id="blog_button">Blog</a></li>
             <li><a href="#">Informasi</a></li>
-            <li><a href="#">Analitik</a></li>
         </ul>
     </div>
     <div class="konten-upload-artikel">
         <h1>Buat Artikel</h1>
-        <form enctype="multipart/form-data">
-            <label>Judul</label><br>
-            <input id="kontainer-judul" type="text" name="" value="" placeholder="Judul Artikel">
-            <span>
-            <label>Upload Background</label><br>
-            <input type="file" name="foto" value="">
-            </span>
-            <label id="Isi-artikel">Isi Artikel</label><br>   
-            <textarea id="summernote" cols="30" rows="10"></textarea>
+        <form method="POST">
+                <label>Judul</label><br>
+                <input id="kontainer-judul" type="text" name="" value="" placeholder="Judul Artikel">
+                <span>
+                <label>Upload Background</label><br>
+                <input type="file" name="foto" value="">
+                </span>
+                <label id="Isi-artikel">Isi Artikel</label><br> 
         </form>
     </div>
+
+    <div class="ckeditor">
+    <textarea name="editor1"></textarea>
+    </div>
+
 
     <div class="side-nav-right">
         <div class="side-nav-up">
@@ -81,29 +82,76 @@
                     </li>
                 </li>
             </ul>
+            <div class="foot-side-nav-up">
+                <button type="button" id="move-to-trash-button">
+                    Move to Trash
+                </button>
+                <button type="button" id="publish-button">
+                    Publish
+                </button>
+            </div>
 
         </div>
-        <div class="side-nav-down"></div>
+        <div class="side-nav-down">
+            <select name="">
+                <option value="">Categories</option>
+                <option value="">Most Used</option>
+            </select>
+            <ul>
+                <li><a href="#All-categories" id="All_categories_button">All Categories</a></li>
+                <li><a href="#Most-used" id="Most_used_button">Most Used</a></li>
+            </ul>
+            <div id="All_categories">
+                <form action="" method="">
+                    <p><input type="checkbox" name="">Seputar Pendidikan</p>
+                    <p><input type="checkbox" name="">Tips & Trick </p>
+                    <p><input type="checkbox" name="">SBMPTN </p>
+                    <p><input type="checkbox" name="">UTBK </p>
+                    <button type="button">
+                        + Add New Categories
+                    </button>
+                </form>
+            </div>
+            <div id="Most_used">
+                Belum ada display most used
+            </div>
+
+
+        </div>
+    </div>
+    <div id="pop_up_menu">
+        <ul>
+            <li><a href="#">Posts</a></li>
+            <li><a href="artikel_terpublish.html">Terpublish</a></li>
+            <li><a href="draft.html">Draft</a></li>
+            <li><a href="terjadwal.html">Terjadwal</a></li>
+            <li><a href="sampah.html">Sampah</a></li>
     </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-  <script>
-      $('#summernote').summernote({
-        placeholder: 'What is in your mind ?',
-        tabsize: 2,
-        height: 120,
-        toolbar: [
-          ['style', ['style']],
-          ['font', ['bold', 'underline', 'clear']],
-          ['color', ['color']],
-          ['para', ['ul', 'ol', 'paragraph']],
-          ['table', ['table']],
-          ['insert', ['link', 'picture', 'video']],
-          ['view', ['fullscreen', 'codeview', 'help']]
-        ]
+    <!--CEditor-->
+    <script>
+        CKEDITOR.replace( 'editor1' );
+
+        function pageMostUsed() {
+            Most_used.style.display = "inline-block";
+            All_categories.style.display = "none";
+        }
+        All_categories_button.addEventListener('click', function() {
+        pageAllCategories()
       });
-  </script>
+
+      function pageAllCategories() {
+          All_categories.style.display = "inline-block"
+          Most_used.style.display = "none";
+      }
+      Most_used_button.addEventListener('click', function() {
+        pageMostUsed()
+      });
+    </script>  
+     <script src="PopUpMenu.js"></script>
+
+
+
+
 </body>
 </html>

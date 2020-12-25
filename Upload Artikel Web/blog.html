@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="blog.css">
     <!--Font Family-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">   
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
@@ -22,11 +20,14 @@
         </div>
         <ul>
             <li><a href="#">Profil Saya</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="#" id="blog_button">Blog</a></li>
             <li><a href="#">Informasi</a></li>
             <li><a href="#">Analitik</a></li>
         </ul>
     </div>
+
+
+
     <div class="Judul-Halaman">
         <h1>Terpublish</h1>
         <button type="button">
@@ -56,6 +57,12 @@
                         <h1>10 PTN Paling Diminati SBMPTN</h1>
                         <p>Seputar Pendidikan</p>
                         <p>14 September 2020</p>
+                        <button type="button" id="edit-artikel-button">
+                            Edit
+                        </button>
+                        <button type="button" id="more-artikel-button">
+                            ...
+                        </button>
                 </div>
                 <div class="object">                        
                     <input type="checkbox" name="object1" value="object1">
@@ -63,6 +70,12 @@
                     <h1>10 PTN Paling Diminati SBMPTN</h1>
                     <p>Seputar Pendidikan</p>
                     <p>14 September 2020</p>
+                    <button type="button" id="edit-artikel-button">
+                        Edit
+                    </button>
+                    <button type="button" id="more-artikel-button">
+                        ...
+                    </button>
                 </div>
                 <div class="object">                        
                     <input type="checkbox" name="object1" value="object1">
@@ -70,6 +83,12 @@
                         <h1>10 PTN Paling Diminati SBMPTN</h1>
                         <p>Seputar Pendidikan</p>
                         <p>14 September 2020</p>
+                        <button type="button" id="edit-artikel-button">
+                            Edit
+                        </button>
+                        <button type="button" id="more-artikel-button">
+                            ...
+                        </button>
                 </div>
                 <div class="object">                        
                     <input type="checkbox" name="object1" value="object1">
@@ -77,9 +96,25 @@
                     <h1>10 PTN Paling Diminati SBMPTN</h1>
                     <p>Seputar Pendidikan</p>
                     <p>14 September 2020</p>
+                    <button type="button" id="edit-artikel-button">
+                        Edit
+                    </button>
+                    <button type="button" id="more-artikel-button">
+                        ...
+                    </button>
                 </div>
         </div>
-
     </div>
+    <div id="pop_up_menu">
+        <ul>
+            <li><a href="#">Posts</a></li>
+            <li><a href="artikel_terpublish.html">Terpublish</a></li>
+            <li><a href="draft.html">Draft</a></li>
+            <li><a href="terjadwal.html">Terjadwal</a></li>
+            <li><a href="sampah.html">Sampah</a></li>
+    </div>
+
+    <script src="PopUpMenu.js"></script>
+
 </body>
 </html>

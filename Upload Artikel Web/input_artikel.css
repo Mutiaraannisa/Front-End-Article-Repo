@@ -132,7 +132,7 @@ body{
 .side-nav-up {
     height: 275px;
     width: 275px;
-    border: 1px solid black;
+    border: 1px solid #c4c4c4;
     margin-bottom: 10px;
     background-color: white;
 }
@@ -276,7 +276,7 @@ body{
 .side-nav-down {
     height: 275px;
     width: 275px;
-    border: 1px solid black;
+    border: 1px solid #c4c4c4;
     background-color: white;
 }
 .side-nav-down select {
@@ -307,7 +307,7 @@ body{
 #All_categories p {
     position: relative;
     left: 10px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -325,6 +325,9 @@ body{
     text-decoration-line: underline;
     color: #2680B6;
     border: none;
+}
+#All_categories button:hover{
+    cursor: pointer;
 }
 #Most_used {
     display: none;
